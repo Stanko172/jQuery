@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Selectors</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            line-height: 1.5em;
+            background: #f4f4f4;
+        }
+        header{
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #container{
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>jQuery | Selectors</h1>
+    </header>
+    <div class="container">
+        <h1 id="heading1">Heading one</h1>
+        <p id="para1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Corrupti officia ipsum quo consequuntur, <span>aut optio tempora inventore cum quam quod.</span>
+            Lorem ipsum dolor sit.
+        </p>
+
+        <h1 class="heading2">Heading one</h1>
+        <p class="para2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Corrupti officia ipsum quo consequuntur, <span>aut optio tempora inventore cum quam quod.</span>
+            Lorem ipsum dolor sit.
+        </p>
+
+        <ul id="list">
+            <li>First element</li>
+            <li>Second element</li>
+            <li>Third element</li>
+            <li>Fourth element</li>
+            <li>Fifth element</li>
+        </ul>
+
+        <input type="button" value="button1">
+        <input type="submit" value="button2">
+        <input type="text">
+
+        <a href="https://www.youtube.com">Youtube</a>
+        <a href="#">Google</a>
+    </div>
+    
+    <script>
+        //Sakriti će se svi h1 elementi na stranici
+        //$('h1').hide();
+
+        //Sakriti će se element sa heading1 id-om
+        //$('#heading1').hide();
+
+        //Sakriti će se svi elementi sa klasom heading1
+        //$('.heading2').hide();
+
+        //Tekst unutar svih span elemenata, koji se nalaze unutar p elementa, će postati crvene boje
+        //$('p span').css('color', 'red');
+
+        //////////////////////////////////////////////////////////////////////////////////////////////
+        //Pozadina prvog elementa liste sa id-om list će biti crvene boje
+        //$('ul#list li:first').css('background-color', 'red');
+
+        //Pozadina zadnjeg elementa liste sa id-om list će biti plave boje
+        //$('ul#list li:last').css('background-color', 'blue');
+
+        //Pozadina parnih elemenata liste će biti sive boje
+        //$('ul#list li:even').css('background-color', 'grey');
+
+        //Pozadina neparnih elemenata liste će biti zelene boje
+        //$('ul#list li:odd').css('background-color', 'green');
+
+        //Tekst prvog elementa liste će biti žute boje
+        //$('ul#list li:nth-child(1)').css('color', 'yellow');
+
+        //Svaki drugi element liste neće imati bullet point
+        //$('ul#list li:nth-child(2n)').css('list-style', 'none');
+
+        //////////////////////////////////////////////////////////////////////////////////////////////
+
+        //Dohvaćanje elemenata na osnovu vrijdnosti atributa 'type'
+        //$('input:submit').hide();
+        //$(':text').hide();
+
+        //Dohvaćenje elemenata po imenu atributa
+        //$('[href]').css('color', 'brown');
+        //$('a[href]').css('color', 'red');
+        //Dohvaćanje elemenata po atributima i sa određenom vrijednosti tog atributa
+        //$('[href="https://www.youtube.com"]').css('color', 'green');
+        //Dohvaćanje svih elemenata
+        //$('*').hide();
+    </script>
+    
+</body>
+</html>
