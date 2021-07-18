@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Selectors</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            line-height: 1.5em;
+            background: #f4f4f4;
+        }
+        header{
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #container{
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>jQuery | Selectors</h1>
+    </header>
+    <div class="container">
+        <input type="button" value="Button 1" id="btn1">
+        <input type="button" value="Button 2" class="btn2">
+
+        <p class="para1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, dolor, temporibus debitis quis nostrum doloribus placeat iure laudantium recusandae a accusantium ut. Quibusdam fuga eligendi nisi! Explicabo, magnam sed. Quam?</p>
+    
+        <ul id="list">
+            <li>First Item</li>
+        </ul>
+    <form id="form">
+        <input type="text" name="username" value="Username"> <br />
+        <input type="email" name="email" value="E-mail"> <br />
+        <label for="cars">Choose a car:</label>
+
+        <select name="cars" id="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select> <br><br>
+        
+        <button type="Submit">Submit</button>
+    </form>
+
+    </div>
+    
+    <script>
+        //Prvi način za click event
+        //$(document).ready( $('#btn1').click( () => alert('Button 1 clicked!')) );
+
+        //Drugi način za click event
+        //$(function(){
+        //    $('#btn1').on('click', () => alert('Button one clicked!'));
+        //});
+        
+        /*
+        $('#btn1').on('dblclick', function(){
+            $('.para1').toggle();
+        });
+
+        //Hover nije on event, ali se sastoji od dva on eventa: mouseenter i mouseleave
+        $('#btn1').hover(function(){
+            $('.para1').toggle();
+        });
+        */
+
+        /*
+        $('#btn1').on('mouseenter', function(){
+            $('.para1').hide();
+        });
+
+        $('#btn1').on('mouseleave', function(){
+            $('.para1').show();
+        });
+        */
+        /*
+        $('#btn1').on('mousemove', function(){
+            $('.para1').show();
+        });
+
+        $('#btn1').on('mouseup', function(){
+            $('.para1').show();
+        });
+
+        $('#btn1').on('mousedown', function(){
+            $('.para1').show();
+        });
+        */
+
+        /////////////////////////////////////////////////////////////////
+
+        //$('#btn1').on('click', function(e){
+            //console.log(e.target.id);
+            //console.log(e.target.innerHTML);
+            //console.log(e.target.outerHTML);
+            //console.log(e.target.className);
+        //});
+
+        //$('.btn2').on('click', function(){
+            //var today = new Date();
+            //var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+'   '+today.getHours()+':'+today.getMinutes();
+            //$('.para1').append(date);
+            //$('ul#list li').html('<li>' + date + '</li>');
+            //$('ul#list').append('<li>' + date + '</li>');
+        //});
+
+        /////////////////////////////////////////////////////////////////
+        /*
+        $('[name=username]').focus(function(){
+            $(this).css('background-color', 'pink');
+        });
+
+        $(':text').blur(function(){
+            $(this).css('background-color', 'white');
+        });
+
+        $(':text').keyup(function(e){
+            console.log(e.target.value);
+        });
+        */
+
+        //$('select').change(function(e){
+        //    alert('Changed!');
+        //});
+
+        /*
+        $('#form').submit(function(e){
+            e.preventDefault();
+            var username = $('input[name=username]').val();
+            console.log(username);
+        });
+        */
+    </script>
+    
+</body>
+</html>
