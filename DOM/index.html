@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Selectors</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            line-height: 1.5em;
+            background: #f4f4f4;
+        }
+        header{
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #container{
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .myClass{
+            background-color: black;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>jQuery | Selectors</h1>
+    </header>
+    <div class="container">
+        <button id="btn1">Button 1</button>
+        <p class="para1">Lorem ipsum dolor sit amet. 1</p>
+        <p class="para2">Lorem ipsum dolor sit amet. 2</p>
+        <div id="myDiv"></div>
+        <input type="text">
+        <ul>
+            <li>Element one</li>
+            <li>Element two</li>
+            <li>Element three</li>
+        </ul>
+        <a href="https://www.google.com">Google</a>
+        <ul id="users">
+
+        </ul>
+    </div>
+    
+    <script>
+        //$('.para1').css({color: 'red', backgroundColor: 'grey'});
+        //$('.para2').addClass('myClass');
+        //$('.para2').removeClass('myClass');
+        //$('#btn1').click(() => $('.para2').toggleClass('myClass'));
+
+        ////////////////////////////////////////////////////////////////////////////
+
+        //$('#myDiv').text("Hello World");
+        //$('#myDiv').html("<h1>Hello World</h1>");
+        //console.log($('#myDiv').html());
+
+        ////////////////////////////////////////////////////////////////////////////
+        /*
+        $('ul').append('<li>End element</li>');
+        $('ul').prepend('<li>Start element</li>');
+
+        $('.para1').prependTo('.para2');
+        $('.para1').appendTo('.para2');
+
+        $('ul').before('<h1>Hello</h1>');
+        $('ul').after('<h1>Hello</h1>');
+
+        //empty brise sve sto se nalazi unutar navednog elementa, ne i navedeni element
+        $('ul').empty();
+        //detach brise sve unutar navedenog elementa i navedeni element
+        $('ul').detach;
+
+        $('a').attr('target', '_blank');
+        alert($('a').attr('target'));
+        $('a').removeAttr('target');
+        */
+
+        //Svaki p element je omotan zasebnim h1 elementom
+        //$('p').wrap('<h1>');
+        //Svi p elementi skupa su omotani jednim h1 elementom
+        //$('p').wrapAll('<h1>');
+
+        //$('input').keyup(function(e){
+        //   if(e.which === 13) $('ul').append('<li>' + e.target.value + '</li>');
+        //});
+
+        /*
+        var newArr = ["John", "Mike", "Luke"];
+        $.each(newArr, function(i, val){
+            $("ul#users").append("<li>" + val + "</li>");
+        });
+        
+        var newArr2 = $('ul#users li').toArray();
+        $.each(newArr2, function(i, val){
+            console.log(val.innerText);
+        });
+        */
+    </script>
+    
+</body>
+</html>
