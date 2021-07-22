@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Selectors</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            line-height: 1.5em;
+            background: #f4f4f4;
+        }
+        header{
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #container{
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+
+        #box{
+            background-color: #333;
+            height: 90px;
+            width: 500px;
+            padding: 40px;
+            margin-top: 10px;
+            text-align: center;
+            color: white;
+            font-size: 32px;
+        }
+
+        #smallBox{
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>jQuery | AJAX</h1>
+    </header>
+    <div class="container">
+       
+        <div id="result"></div>
+
+        <ul id="users">
+            
+        </ul>
+
+        <form action="https://jsonplaceholder.typicode.com/posts" id="form">
+            <input id="title" type="text"> <br />
+            <textarea id="body" cols="30" rows="10"></textarea> <br /><br />
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+    
+    <script>
+        //$('#result').load('test.html');
+        /*
+        $('#result').load('test2.html', function(responseText, statusText, xhr){
+            if(statusText == "success"){
+                alert("Uspjeh!");
+            }else{
+                alert("Neuspjeh! - " + xhr.statusText)
+            }
+        });
+        */
+
+        /*
+        $.get("test.html", function(data){
+            $("#result").html(data);
+        });
+        */
+
+        //////////////////////////////////////////////////////////////////////////////////////
+
+        /*
+        $.getJSON('users.json', function(data){
+            $.each(data, function(i, user){
+                $("ul#users").append("<li>" + user.firstname + " - " + user.lastname + "</li>");
+            });
+        });
+        */ 
+ 
+        //////////////////////////////////////////////////////////////////////////////////////
+
+        /*
+        $.ajax({
+            method: "GET",
+            url: "https://jsonplaceholder.typicode.com/posts",
+            dataType: "json"
+        }).done(function(data){
+            $.map(data, function(post, i){
+                $("#result").append(
+                    "<div>" + "<h1>" + post.title + "</h1>" + "<p>" + post.body + "</p>" + "</div>" 
+                );
+            });
+        });
+        */ 
+
+        /*
+        $("#form").submit(function(e){
+            e.preventDefault();
+
+            var title = $("#title").val();
+            var body = $("#title").val();
+            var url = $(this).attr("action");
+
+            $.post(url, {title: title, body: body}).done(function(data){
+                console.log(data);
+            });  
+        });
+        */
+
+
+    </script>
+    
+</body>
+</html>

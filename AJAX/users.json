@@ -1,0 +1,22 @@
+[
+    {
+        "firstname": "Stanko",
+        "lastname": "Bebek",
+        "e-mail": "stanko.bebek@email.com"
+    },
+    {
+        "firstname": "Ana",
+        "lastname": "Anić",
+        "e-mail": "ana.anic@email.com"
+    },
+    {
+        "firstname": "Marko",
+        "lastname": "Markovic",
+        "e-mail": "marko.markovic@email.com"
+    },
+    {
+        "firstname": "Marija",
+        "lastname": "Maric",
+        "e-mail": "marija.maric@email.com"
+    }
+]
